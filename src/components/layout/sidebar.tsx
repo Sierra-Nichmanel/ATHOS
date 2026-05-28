@@ -16,6 +16,7 @@ import {
 import { cn } from '@/lib/utils';
 import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/hooks/useAuth';
+import { ATHOSLogo } from '@/components/ui/ATHOSLogo';
 
 const navItems = [
   { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
@@ -38,16 +39,8 @@ export function Sidebar() {
 
   return (
     <aside className="fixed left-0 top-0 z-40 h-screen w-[280px] border-r border-outline-variant/30 bg-white px-6 py-8 flex flex-col">
-      <div className="mb-12 px-2 flex items-center gap-3">
-        <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
-          <span className="text-white font-black text-xl italic">A</span>
-        </div>
-        <div>
-          <h1 className="text-xl font-black tracking-tight text-on-background">
-            Africentric <span className="text-primary">OS</span>
-          </h1>
-          <p className="text-[10px] font-bold text-on-surface-variant/50 uppercase tracking-widest">Workspace</p>
-        </div>
+      <div className="mb-12 px-2">
+        <ATHOSLogo size={40} variant="light" />
       </div>
       
       <nav className="flex-1 space-y-2">

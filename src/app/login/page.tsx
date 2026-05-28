@@ -13,6 +13,7 @@ import {
   ShieldCheck
 } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
+import { ATHOSLogo } from '@/components/ui/ATHOSLogo';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -47,13 +48,8 @@ export default function LoginPage() {
       <div className="hidden lg:flex flex-col justify-between p-12 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary-container/40 via-transparent to-transparent" />
         
-        <Link href="/" className="flex items-center gap-2.5 z-10">
-          <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center">
-            <span className="text-primary font-black text-xl italic">A</span>
-          </div>
-          <span className="text-2xl font-bold tracking-tight text-white">
-            Africentric <span className="text-white/70">OS</span>
-          </span>
+        <Link href="/" className="z-10">
+          <ATHOSLogo size={44} variant="dark" />
         </Link>
 
         <div className="z-10">
@@ -148,7 +144,7 @@ export default function LoginPage() {
           </form>
 
           <p className="mt-12 text-center text-on-surface-variant font-medium">
-            New to Africentric? <Link href="/signup" className="text-primary font-bold hover:underline">Create an account</Link>
+            New to ATHOS? <Link href="/signup" className="text-primary font-bold hover:underline">Create an account</Link>
           </p>
         </div>
       </div>

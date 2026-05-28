@@ -3,8 +3,8 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   
-  --color-primary: #0058be;
-  --color-primary-container: #2170e4;
+  --color-primary: #0F355C;
+  --color-primary-container: #1A4D80;
   --color-on-primary: #ffffff;
   
   --color-secondary: #006c49;
@@ -16,22 +16,22 @@
   --color-success: #006c49;
   --color-warning: #825100;
   
-  --color-background: #f8f9ff;
-  --color-on-background: #0b1c30;
+  --color-background: #f8fafc;
+  --color-on-background: #091D34;
   
   --color-surface: #ffffff;
-  --color-surface-variant: #d3e4fe;
-  --color-on-surface: #0b1c30;
-  --color-on-surface-variant: #424754;
+  --color-surface-variant: #e2e8f0;
+  --color-on-surface: #091D34;
+  --color-on-surface-variant: #475569;
   
-  --color-outline: #727785;
-  --color-outline-variant: #c2c6d6;
+  --color-outline: #64748b;
+  --color-outline-variant: #cbd5e1;
   
   --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #eff4ff;
-  --color-surface-container: #e5eeff;
-  --color-surface-container-high: #dce9ff;
-  --color-surface-container-highest: #d3e4fe;
+  --color-surface-container-low: #f1f5f9;
+  --color-surface-container: #e2e8f0;
+  --color-surface-container-high: #cbd5e1;
+  --color-surface-container-highest: #94a3b8;
 
   --radius-sm: 0.125rem;
   --radius-md: 0.375rem;
@@ -59,7 +59,7 @@ body {
 .premium-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 60px -15px rgba(11, 28, 48, 0.1);
-  border-color: rgba(0, 88, 190, 0.2);
+  border-color: rgba(15, 53, 92, 0.2);
 }
 
 .glass {
@@ -69,7 +69,7 @@ body {
 }
 
 .premium-shadow {
-  box-shadow: 0 32px 64px -16px rgba(0, 88, 190, 0.1);
+  box-shadow: 0 32px 64px -16px rgba(15, 53, 92, 0.1);
 }
 
 /* Custom Scrollbar */

@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Africentric Business OS",
-  description: "Simple but powerful system for African SMEs to track sales, inventory, and finance.",
+  title: "ATHOS — Business OS",
+  description: "The sovereign operating system for African businesses. Track sales, inventory, and finance with precision.",
   icons: {
     icon: "/favicon.ico",
   },

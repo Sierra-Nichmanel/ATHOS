@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { cn } from '@/lib/utils';
+import { ATHOSLogo } from '@/components/ui/ATHOSLogo';
 
 export default function SignupPage() {
   const [step, setStep] = useState(1);
@@ -110,11 +111,8 @@ export default function SignupPage() {
         </div>
         
         <div className="relative z-10">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center rotate-3 group-hover:rotate-12 transition-transform shadow-xl shadow-primary/20">
-              <span className="text-white font-black text-2xl italic">A</span>
-            </div>
-            <span className="text-2xl font-black tracking-tighter text-white">AFRICENTRIC</span>
+          <Link href="/" className="group">
+            <ATHOSLogo size={48} variant="dark" />
           </Link>
           
           <div className="mt-32 max-w-md">

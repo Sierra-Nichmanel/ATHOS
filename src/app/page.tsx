@@ -16,9 +16,9 @@ import {
   Rocket,
   Lock,
   ChevronRight,
-  Sparkles,
-  Command
+  Sparkles
 } from 'lucide-react';
+import { ATHOSLogo } from '@/components/ui/ATHOSLogo';
 
 export default function LandingPage() {
   const containerVariants = {
@@ -43,18 +43,7 @@ export default function LandingPage() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-2xl border-b border-outline-variant/20">
         <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-11 h-11 bg-on-background rounded-2xl flex items-center justify-center shadow-2xl shadow-on-background/20 relative group overflow-hidden">
-              <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <Command className="text-white h-6 w-6 relative z-10" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-black tracking-tighter text-on-background leading-none">
-                Africentric <span className="text-primary italic">OS</span>
-              </span>
-              <span className="text-[10px] font-black uppercase tracking-[0.3em] text-on-surface-variant/40">Business Ecosystem</span>
-            </div>
-          </div>
+          <ATHOSLogo size={44} variant="light" />
           
           <div className="hidden lg:flex items-center gap-12">
             {['Architecture', 'Ecosystem', 'Security', 'Enterprise'].map((item) => (
@@ -101,7 +90,7 @@ export default function LandingPage() {
             </motion.div>
             
             <motion.h1 variants={itemVariants as any} className="text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tight text-on-background leading-[0.85] mb-12">
-              The Sovereign <br/> <span className="text-primary">Business OS.</span>
+              The Sovereign <br/> <span className="text-primary">ATHOS.</span>
             </motion.h1>
             
             <motion.p variants={itemVariants as any} className="text-xl md:text-3xl text-on-surface-variant font-medium max-w-3xl mx-auto leading-relaxed mb-16 px-4">
@@ -225,7 +214,7 @@ export default function LandingPage() {
               <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/20 blur-[120px] rounded-full" />
               <div className="relative z-10 text-center max-w-4xl mx-auto">
                 <h2 className="text-5xl md:text-8xl font-black tracking-tight text-on-background leading-[0.9] mb-12">
-                  Upgrade to the <br/> <span className="text-primary italic">Business OS of the future.</span>
+                  Upgrade to <br/> <span className="text-primary italic">ATHOS today.</span>
                 </h2>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                   <Link 
@@ -253,12 +242,9 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-16 mb-32">
             <div className="col-span-2 space-y-8">
-              <div className="flex items-center gap-3">
-                <Command className="h-8 w-8 text-primary" />
-                <span className="text-2xl font-black tracking-tighter">Africentric <span className="text-primary italic">OS</span></span>
-              </div>
+              <ATHOSLogo size={36} variant="dark" />
               <p className="text-white/40 font-medium max-w-xs leading-relaxed text-sm">
-                The premier operating system for the African business class. Engineered for sovereign scale and absolute precision.
+                ATHOS — the premier operating system for the African business class. Engineered for sovereign scale and absolute precision.
               </p>
             </div>
             <div>
@@ -294,7 +280,7 @@ export default function LandingPage() {
           </div>
           <div className="pt-16 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
             <p className="text-xs font-black uppercase tracking-widest text-white/20">
-              © 2026 Africentric Tech Hub. Sovereign Business Systems.
+              © 2026 ATHOS. Sovereign Business Systems.
             </p>
             <div className="flex items-center gap-8">
               {['X (Twitter)', 'LinkedIn', 'Github'].map(s => (
