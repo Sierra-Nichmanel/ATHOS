@@ -62,10 +62,16 @@ export default function SignupPage() {
       if (authError) throw authError;
 
       if (authData.user) {
+        const slug = formData.businessName
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/(^-|-$)+/g, '') + '-' + Math.random().toString(36).substring(2, 7);
+
         const { data: bizData, error: bizError } = await supabase
           .from('businesses')
           .insert({
             name: formData.businessName,
+            slug: slug,
             business_type: formData.industry,
             owner_id: authData.user.id
           })

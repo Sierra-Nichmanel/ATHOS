@@ -93,13 +93,21 @@ ALTER TABLE expenses ENABLE ROW LEVEL SECURITY;
 
 -- RLS Policies
 
--- Businesses: Users can only see their own business
+-- Businesses: Owners and members can access their business
 CREATE POLICY business_access ON businesses
-    FOR ALL USING (id IN (SELECT business_id FROM profiles WHERE id = auth.uid()));
+    FOR ALL USING (
+        owner_id = auth.uid()
+        OR
+        id IN (SELECT business_id FROM profiles WHERE id = auth.uid())
+    );
 
--- Profiles: Users can see profiles in their own business
+-- Profiles: Users can see profiles in their own business, and insert their own profile
 CREATE POLICY profile_access ON profiles
-    FOR ALL USING (business_id IN (SELECT business_id FROM profiles WHERE id = auth.uid()));
+    FOR ALL USING (
+        id = auth.uid()
+        OR
+        business_id IN (SELECT business_id FROM profiles WHERE id = auth.uid())
+    );
 
 -- Products: Scoped by business_id
 CREATE POLICY product_access ON products
